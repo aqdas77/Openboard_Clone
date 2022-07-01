@@ -4,7 +4,7 @@ const socket = require("socket.io")
 const app = express();                      //initialized and server ready
 app.use(express.static("public"));          //public and app.js both are at same level
 
-let port = 5000;
+let port = process.env.PORT || 5000;
 let server = app.listen(port,()=>{
  console.log("server is listening on port 5000")
 })
